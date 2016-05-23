@@ -1,0 +1,103 @@
+	<!--responsive slideshow-->
+    <link rel="stylesheet" href="css/responsiveslides.css">
+
+    <!-- theme -->
+    <link href="css/rockox.css" rel="stylesheet">
+	
+    <!-- Add fancyBox -->
+	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" media="screen">
+
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	
+    <div class="container">
+    
+    	<div class="shop-detail">
+            <div class="row">
+                <div class="col-md-5 col-sm-6">
+                    <!-- Slideshow 3 -->
+                    <ul class="rslides" id="slider3">
+                      <li><img src="images/product-detail-img.jpg" alt=""></li>
+                      <li><img src="images/product-detail-img2.jpg" alt=""></li>
+                      <li><img src="images/product-detail-img3.jpg" alt=""></li>
+                      <li><img src="images/product-detail-img4.jpg" alt=""></li>
+                    </ul>
+                
+                    <!-- Slideshow 3 Pager -->
+                    <ul id="slider3-pager">
+                      <li class="first"><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-6">
+                    <h2>Flying Ninja</h2>
+                    <div class="customer-reviews clearfix">
+                        <p>(4 customer reviews)</p>
+                        <div class="rating">
+                           <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                        </div>
+                    </div>
+                    <p class="price"><del>$75</del>$55</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing  of Quisque that a ultricies vestibulum Graphic Design elit. power Quisque ultricies power vestibulum molestie.</p>
+
+<p>Graphic Design for dummy Lorem ipsum dolor sit amet, consectetur adipiscing  of Quisque that a ultricies vestibulum Graphic Design elit. power Quisque ultricies power vestibulum molestie.</p>
+                    <div class="item-counter">
+                        <span id="less-item" class="pull-left">-</span>
+                        <input type="text" value="0" id="total-items" class="items-total">
+                        <span id="pluss-item" class="pull-right">+</span>
+                    <div class="clr"></div>
+                    </div>
+                    <a class="btn btn-yellow pull-left" href="shopping-cart.html">Add To Cart</a>
+                    <div class="clearfix"></div>
+                    <p class="product-detail-cat">Category: <span>T-shirt</span></p>
+                </div>
+                
+            </div>
+         </div>
+         
+   </div>
+   <script src="js/jquery.min.js"></script>
+   <!--responsive slideshow-->	
+   <script src="js/responsiveslides.min.js"></script>
+   <!-- fancybox -->
+   <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+   <script>
+   			jQuery(function() {
+			  jQuery("#slider3").responsiveSlides({
+				manualControls: '#slider3-pager',
+			  });
+			  //item counter
+				var itemcount= 0;
+				jQuery('#pluss-item').on("click", function() { 
+					itemcount++;
+				jQuery('#total-items').val(itemcount);
+				});
+				jQuery('#less-item').on("click", function() { 
+					itemcount--;
+				jQuery('#total-items').val(itemcount);
+				});
+				//item counter2
+				var itemcount2= 0;
+				jQuery('#pluss-item2').on("click", function() { 
+					itemcount++;
+				jQuery('#total-items2').val(itemcount);
+				});
+				jQuery('#less-item2').on("click", function() { 
+					itemcount--;
+				jQuery('#total-items2').val(itemcount);
+				});
+				jQuery(".various").fancybox({
+					maxWidth	: 1000,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '100%',
+					height		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+			});
+   </script>

@@ -1,0 +1,159 @@
+	<!--responsive slideshow-->
+    <link rel="stylesheet" href="css/responsiveslides.css">
+
+    <!-- theme -->
+    <link href="css/rockox.css" rel="stylesheet">
+	
+    <!-- Add fancyBox -->
+	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" media="screen">
+	
+    <!-- form styling -->
+	<link rel="stylesheet" href="css/uniform.default.css" media="screen" />
+
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	
+    <div class="container">
+    
+         <div class="row checkout">
+        	<div class="col-md-12">
+            	<h2 class="bordered light">Shopping Cart</h2>
+                <div class="overflow">
+                <div class="cart-list">
+                    <div class="cart-bar">
+                        <div class="cart-product-heading">Product</div>
+                        <div class="cart-price-heading">Price</div>
+                        <div class="cart-quantity-heading">Quantity</div>
+                        <div class="cart-total-heading">Total</div>
+                        <div class="cart-remove">&nbsp;</div>
+                    <div class="clearfix"></div>
+                    </div>
+                    <div class="cart-bar-list">
+                    	<div class="cart-product">
+                        	<a class="pull-left" href="#."><img width="80" alt="" src="images/shirt7.jpg"></a>
+                            <h4>Panadol Tablet</h4>
+                        </div>
+                        <div class="cart-price"><span class="amount">£5.99</span></div>
+                        <div class="cart-quantity">
+                        	<div class="item-counter">
+                                <span id="less-item2" class="pull-left">-</span>
+                                <input type="text" value="0" id="total-items2" class="items-total">
+                                <span id="pluss-item2" class="pull-right">+</span>
+                            <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                        	<span class="amount">£5.99</span>
+                        </div>
+                        <div class="product-remove2">
+                        	<span>x</span>
+                        </div>
+                    </div>
+                
+                    <div class="cart-buttons clearfix">
+                    	<div class="pull-left">
+                        	<div class="coupon-card">
+                            	<input type="text" placeholder="Coupon Code">
+                                <input type="submit" value="apply coupon" class="btn btn-blue">
+                            </div>
+                        </div>
+                    	<div class="pull-right">
+                        	<a class="btn btn-green btn-rounded" href="#.">Update cart</a>
+                            <a class="btn btn-yellow btn-rounded" href="#.">Procede to checkout</a>
+                        </div>
+                    </div>
+                 </div>
+                    <div class="clearfix"></div>
+                    </div>
+                   
+                   <div class="height40"></div>
+                   
+                   <div class="row">
+                   	<div class="col-md-7">
+                   		<div class="cart-shipping">
+                        <h4 class="light">Calculate Shipping</h4>
+                        <form>
+                                <div class="selector" style="width: 190px;"><span style="width: 188px; -moz-user-select: none;">United Kingdiom</span>
+                                <select>
+                                    <option>United Kingdiom</option>
+                                    <option>U.S.A</option>
+                                </select></div>
+                                <input type="text" placeholder="Post Code / Zip">
+                                <input type="submit" value="update Totals" class="btn btn-red">
+                        </form>
+                       <div class="clearfix"></div>
+                       </div> 
+                    </div>
+                    <div class="col-md-5">
+                   		<div class="cart-shipping">
+                        <h4 class="light">Cart Totals</h4>
+                        <div class="cart-total-amount">
+                        	<label class="pull-left">Cart Subtotal</label>
+                        	<label class="pull-right text-right price">£65.94</label>
+							<div class="clearfix"></div>
+                        	<label class="pull-left">Shipping</label>
+                        	<label class="pull-right text-right">Free Shipping</label>
+							<div class="clearfix"></div>
+                            <div class="order-total clearfix">
+                        	<label class="pull-left">Order Total</label>
+                        	<label class="pull-right text-right price">£65.94</label>
+							</div>
+                        </div>
+                       <div class="clearfix"></div>
+                       </div> 
+                    </div>
+                   </div>
+                   
+            <div class="clearfix"></div>
+            </div>
+        </div>
+         
+         
+   </div>
+   <script src="js/jquery.min.js"></script>
+   <!--responsive slideshow-->	
+   <script src="js/responsiveslides.min.js"></script>
+   <!-- uniform -->
+   <script src="js/jquery.uniform.js"></script>
+   <!-- fancybox -->
+   <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+   <script>
+   			jQuery(function() {
+				jQuery("#slider3").responsiveSlides({
+					manualControls: '#slider3-pager',
+				});
+				//item counter
+				var itemcount= 0;
+				jQuery('#pluss-item').on("click", function() { 
+					itemcount++;
+				jQuery('#total-items').val(itemcount);
+				});
+				jQuery('#less-item').on("click", function() { 
+					itemcount--;
+				jQuery('#total-items').val(itemcount);
+				});
+				//item counter2
+				var itemcount2= 0;
+				jQuery('#pluss-item2').on("click", function() { 
+					itemcount++;
+				jQuery('#total-items2').val(itemcount);
+				});
+				jQuery('#less-item2').on("click", function() { 
+					itemcount--;
+				jQuery('#total-items2').val(itemcount);
+				});
+				jQuery(".various").fancybox({
+					maxWidth	: 1000,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '100%',
+					height		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+				//form styling
+				jQuery("select").uniform();
+				});
+   </script>
